@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Virtual Event Planner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section id="heading" class="container">
+    <h1>My Events</h1>
+  </section>
+  <section id="add-event">
+    <div id="add-event-form" class="container">
+      <h2>Add New Event</h2>
+      <label for="event-name">Event Name:</label>
+      <input type="text" id="event-name"><br>
+    
+      <label for="event-date">Date:</label>
+      <input type="date" id="event-date"><br>
+    
+      <label for="event-description">Description:</label>
+      <textarea id="event-description"></textarea><br>
+    
+      <button id="save-event">Save</button>
+      <button id="cancel-add">Cancel</button>
+    </div>
+  </section>
+  <section id="show-events">
+    <div class="container">
+      <input type="text" id="search" placeholder="Search events...">
+      <button id="search-button">Search</button>
+
+      <h2>Filters</h2>
+      <label><input type="checkbox" id="filter-ongoing"> Ongoing</label>
+      <label><input type="checkbox" id="filter-upcoming"> Upcoming</label>
+    </div>
+    <div id="event-list" class="container"></div>
+
+    <div id="event-details-template" style="display: none;">
+      <h3>Event Name</h3>
+      <p>Date: <span class="event-date"></span></p>
+      <p>Description: <span class="event-description"></span></p>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
